@@ -11,11 +11,13 @@ import { UserService } from '../user.service';
 export class DashboardComponent implements OnInit {
 
   
-
+  name = "anonymous";
 
   constructor(private user: UserService) { }
 
   ngOnInit() {
+  	console.log("DashboardComponent :: " + this.user.getUserLoggedIn() );
+  	this.name = this.user.username;
   }
 
 }

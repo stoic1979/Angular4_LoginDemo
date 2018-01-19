@@ -5,7 +5,7 @@ export class UserService {
 
 
 	private isUserLoggedIn;
-	private username;
+	public username;
 
   constructor() { 
 
@@ -15,6 +15,7 @@ export class UserService {
 
   setUserLoggedIn() {
   	this.isUserLoggedIn = true;
+  	this.username = "abc-user";
   }
 
   getUserLoggedIn() {
